@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Nav Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- jqueery effects-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    
+
+    <style>
+        #header {
+            background-color: #FBE4D8;
+        }
+        .nav-link i {
+        font-size: 1.5rem;
+    }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff5e5e;
+        }
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+          /* this will be stle for blinking my webpage */
+        body {
+        background-color: #05161A;
+        }
+
+          @keyframes blink {
+        0% {
+            color: #39FF14;
+        }
+        50% {
+            color: #7DF9FF;
+        }
+        100% {
+            color: #39FF14;
+        }
+        
+        }
+
+        .blink-text {
+        animation: blink 1s infinite;
+        }
+
+        /* style about my webpage*/
+        #about-me {
+            background-color: #C38EB4;
+            padding: 80px 0;
+        }
+        #about-me h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        #about-me p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        #about-me img {
+            margin-top: 50px;
+            max-width: 100%;
+            height: auto;
+        }
+        #services {
+        background-color: #E1CBD7;
+        padding: 80px 0;
+        }
+       /* style about my services*/
+        #services h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        #services p {
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .service-box {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .service-box i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ff5e5e;
+        }
+
+        .service-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-box p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+    }
+    /* style about my portfolio*/
+                #portfolio {
+                    background-color: #86A8CF;
+            padding: 80px 0;
+            }
+            #portfolio h2 {
+                font-size: 3rem;
+                margin-bottom: 30px;
+            }
+            #portfolio p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+            .portfolio-item {
+                margin-bottom: 50px;
+            }
+            .portfolio-item h3 {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            .portfolio-item p {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+            .portfolio-item img {
+                max-width: 100%;
+                height: auto;
+            }
+        /* style about my contact*/
+        #contact {
+            background-color: #343a40;
+            padding: 80px 0;
+            color: #fff;
+        }
+        #contact h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        .contact-info li {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color
+            : #555;
+        display: flex;
+        align-items: center;
+        }
+        .contact-info i {
+        font-size: 2rem;
+        margin-right: 20px;
+        color: #ff5e5e;
+        }
+        .contact-form {
+        margin-top: 50px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+        }
+        .contact-form textarea {
+        height: 200px;
+        }
+        .contact-form button[type="submit"] {
+        background-color: #ff5e5e;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        }
+        .contact-form button[type="submit"]:hover {
+        background-color: #f44336;
+        }
+                    .contact-info li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #555;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+         /* this will be may color in icon */
+        .contact-info li a:hover {
+            color: #3b5998;
+        }
+        .contact-info li a:hover i {
+            color: #1DA1F2;
+        }
+        .contact-info li a:hover span {
+            color: #E4405F;
+        }
+        .contact-info li a {
+        display: inline-flex;
+        align-items: center;
+        color: #555;
+        text-decoration: none;
+        padding-left: 10px;
+        }
+        /* Style for the spinner */
+        .spinner {
+                    border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        animation: spin 2s linear infinite;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    /* Animation for the spinner */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Style for the page content */
+    .content {
+        margin-top: 150px;
+        text-align: center;
+        font-size: 36px;
+    }
+    .parallax {
+    /* The image used */
+    background-image: url("https://shotkit.com/wp-content/uploads/2021/07/rule-of-thirds-feature.jpg");
+
+    /* Set a specific height */
+    min-height: 800px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    }
+
+
+
+
+
+ </style>
+ <script>
+    // Function to hide the spinner and show the page content
+    function showContent() {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }
+
+    // Event listener to hide the spinner and show the page content when the page finish    es loading
+    window.addEventListener("load", function() {
+        showContent();
+    });
+</script>
+
+</head>
+<body>
+      <!-- spinener -->
+    <div id="spinner" class="spinner"></div>
+    
+    <!-- parallax -->
+    <div class="parallax"></div>
+
+
+
+    <!-- my navbar -->
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="MyWebPage Logo" style="width: 55px; height: 55px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#home"><i class="bi bi-house-door-fill"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-me"><i class="bi bi-person-fill"></i> About Me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services"><i class="bi bi-grid-fill"></i> Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio"><i class="bi bi-folder-fill"></i> Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact"><i class="bi bi-envelope-fill"></i> Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+  <!-- my welcome page -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1 class="blink-text">Welcome to my WebPage!</h1>
+        </div>
+    </div>
+</div>
+
+  <!-- my about me  -->
+
+    <section id="about-me">
+                 <!-- transition fade in-->
+     <div class="fade-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p style="text-align: justify;">Dangal Greetings! My name is Camille Dacillo, and I am a incoming 3rd year student from Cabuyao, Laguna I have always had a passion for editing and enjoy spending my free time exploring different editing software and techniques. When I'm not honing my editing skills, I love to go jogging with my mom and my furry companion, my dog. It's always fun to have some bonding time with them while keeping fit and healthy. I am excited to pursue my dreams of becoming a web developer and look forward to creating websites that are not only functional but also visually appealing.</p>
+                    <p style="text-align: justify;">"Life is a journey, not a destination. Embrace the ups and downs, for they are what make the journey worthwhile. Cherish the moments, learn from the challenges, and never stop growing."</p>
+                    <img src="images/4.jpg" class="img-fluid">
+                    <img src="images/dog.jpg"       class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <img src="images/3.jpg"  class="img-fluid">
+                    <img src="images/2.jpg"       class="img-fluid">
+                    <img src="images/dog2.jpg"       class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- my services-->
+    
+    <section id="services">
+                 <!-- transition fade in-->
+           <div class="fade-in">
+        <div class="container">
+          <h2>Services</h2>
+          <p>Here are some of the services I offer:</p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="service-box">
+                <i class="fas fa-folder-open fa-4x"></i>
+                <h3>My Works</h3>
+                <p>Here you can see my previous projects and works that showcase my skills in web development.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-box">
+                <i class="fas fa-video fa-4x"></i>
+                <h3>Video Editing</h3>
+                <p>I can create and edit high-quality videos for your promotional materials or personal projects.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-box">
+                <i class="fas fa-camera fa-4x"></i>
+                <h3>Photography</h3>
+                <p>"I can provide high-quality photography and videography services for various occasions and events.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        <!-- portfolio-->
+    
+      <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p>Here are some of my recent projects in my different subject:</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="images/6.jpg" class="img-fluid" alt="Wild Landscape" style="margin-bottom: 100px;">
+                        <img src="images/8.jpg" class="img-fluid" alt="Wild Landscape">
+                                              
+                        <h3>My Works</h3>   
+                        <p style="text-align: justify;">"I created a BMI Calculator and a Restaurant List. The BMI Calculator allows users to calculate their Body Mass Index based on their weight and height. It is a helpful tool for monitoring health and can be accessed online from any device. The Restaurant List is a comprehensive guide to local restaurants that includes information about each restaurant's cuisine, price range, and customer ratings. It is regularly updated to provide the latest information and is searchable by location, cuisine, or price range. The list is a valuable resource for food enthusiasts and anyone looking for new places to eat out."</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <iframe width="350" height="555" src="https://www.youtube.com/embed/y7Ci_H9bYEk" title="Beginners Guide to Video Editing (Start to Finish)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </a>
+                        <h3>Video Editing</a></h3>
+                        <p style="text-align: justify;">"A phishing short film could be a short video that depicts a scenario involving a phishing attack. Phishing is a type of cyberattack that involves tricking individuals into providing sensitive information, such as login credentials or financial information, by disguising the attacker as a trustworthy entity. In a phishing short film, the story could revolve around a character who falls victim to a phishing attack, or a character who successfully identifies and avoids a phishing attempt. The film might aim to raise awareness about the dangers of phishing and provide tips on how to avoid falling prey to such attacks."</p>
+                    </div>
+                </div>  
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="https://www.colesclassroom.com/wp-content/uploads/2018/07/sun-flower-3292932_1280-800x500.jpg" class="img-fluid" alt="Wild Landscape" /></div><br>
+                        <img src="images/7.jpg" class="img-fluid" alt="Wild Landscape" />
+
+                        </a>
+                        <h3>Photography</a></h3>
+                        <p style="text-align: justify;">"Editing photos in Adobe Lightroom involves adjusting various settings to enhance the visual appeal of an image. When editing a photo of coconut trees, clouds, weather, and a small house in the right, you may want to adjust the exposure, contrast, and highlights to bring out the details in the clouds and the trees. You can also adjust the color temperature to enhance the warm tones of the sky and the clouds. Additionally, you may want to crop the image to emphasize the small house on the right and to remove any distractions in the background."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- my contact -->
+
+      
+    
+        <section id="contact">
+            <div class="message-box"></div>
+            <div class="container">
+                <h2>Contact Us</h2>
+                <ul class="contact-info">
+                    <div class="contact-icons">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61858.6456642572!2d120.99875045237494!3d14.301823377440632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d62d43154f47%3A0x99eec5769bb55684!2sCarmona%2C%20Cavite!5e0!3m2!1sen!2sph!4v1683138009402!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <li><a href="https://www.facebook.com/Daggssttyyzz" class="facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+                        <li><a href="https://www.instagram.com/yourpapidags/" class="instagram"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+                        <li><a href="https://twitter.com/your-official-account" class="twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+                      </div>
+                      <form action="send_email.php" method="POST" class="contact-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    
+                        <button type="submit">Send</button>
+                    </form>
+                    
+
+                        <footer style="text-align: center; color: white;">
+                            <p>&copy; 2023 MyWebPage. All rights reserved.</p>
+                            <img src="images/logo.png" alt="MyWebPage Logo" class="logo">
+                        </footer>
+        
+                    </form>
+                </div>
+            </section>
+</body>
+</html>
+
+    
+
+            
